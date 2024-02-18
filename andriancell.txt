@@ -2,3 +2,8 @@
 - Membuat index.html, main.scss, main.js, nav.html, footer.html, pulsa.html, game.html
 - Membuat Halaman Pulsa: axis.html, indosat.html, smartfren.html, telkomsel.html, tri.html, xl.html
 - Design Awal keseluruhan web
+
+0.001
+- Membuat Halaman Game: free-fire-max.html dan menambahkan stylenya
+- Menambahkan margin-bottom di .item_container dengan nilai var(--mb-1) (bernilai 1rem)
+- Menghapus margin-top: 2rem di .pulsa_nohp

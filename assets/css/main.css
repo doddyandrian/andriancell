@@ -330,6 +330,7 @@ img {
 .item_container {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
+  margin-bottom: var(--mb-1);
 }
 
 .item_list {
@@ -406,7 +407,6 @@ input[type=radio]:checked + .pulsa_label {
 
 .pulsa_nohp {
   width: 100%;
-  margin-top: 2rem;
 }
 
 input[type=tel].pulsa_telp {
@@ -437,6 +437,17 @@ input[type=tel].pulsa_telp {
 .pulsa_submit:active {
   background-color: var(--first-color-alt);
   color: var(--container-color);
+}
+
+/* TOP UP GAME */
+.title_item_game {
+  font-size: var(--normal-font-size);
+}
+
+.membership_container {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: var(--mb-1);
 }
 
 /* MEDIA QUERIES */
