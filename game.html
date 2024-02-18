@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Up Game | Andrian Cell</title>
+    <link rel="shortcut icon" href="assets/icon-logo.png" type="image/x-icon" />
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <header class="header" id="header">
+      <script>
+        window.addEventListener("DOMContentLoaded", function () {
+          var navigation = document.getElementById("header");
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", "assets/html/nav.html", true);
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              navigation.innerHTML = xhr.responseText;
+            }
+          };
+          xhr.send();
+        });
+      </script>
+    </header>
+    <!-- AKHIR NAVIGATION -->
+
+    <!-- MAIN -->
+    <main class="main">
+      <!-- HOME -->
+      <section class="section home" id="home">
+        <h1 class="home_title">ANDRIAN CELL</h1>
+      </section>
+      <!-- AKHIR HOME -->
+
+      <!-- GAME -->
+      <section class="section item" id="item">
+        <div class="container">
+          <h2 class="section_title">TOP UP GAME</h2>
+          <ul class="item_container grid">
+            <!-- Free Fire MAX -->
+            <li class="item_list">
+              <a class="item_link" href="game/free-fire-max.html">
+                <div class="item_image">
+                  <img src="assets/image/free_fire.png" alt="Free Fire MAX" />
+                </div>
+                Free Fire MAX
+              </a>
+            </li>
+
+            <!-- Mobile Legends -->
+            <li class="item_list">
+              <a class="item_link" href="game/mobile-legends.html">
+                <div class="item_image">
+                  <img src="assets/image/mobile_legends.png" alt="Mobile Legends Bang Bang" />
+                </div>
+                Mobile Legends
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- AKHIR GAME -->
+    </main>
+    <!-- AKHIR MAIN -->
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+      <script>
+        window.addEventListener("DOMContentLoaded", function () {
+          var footer = document.getElementById("footer");
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", "assets/html/footer.html", true);
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              footer.innerHTML = xhr.responseText;
+            }
+          };
+          xhr.send();
+        });
+      </script>
+    </footer>
+    <!-- AKHIR FOOTER -->
+
+    <!-- MY JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

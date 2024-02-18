@@ -1,0 +1,4 @@
+0.0
+- Membuat index.html, main.scss, main.js, nav.html, footer.html, pulsa.html, game.html
+- Membuat Halaman Pulsa: axis.html, indosat.html, smartfren.html, telkomsel.html, tri.html, xl.html
+- Design Awal keseluruhan web
