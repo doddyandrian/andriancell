@@ -7,3 +7,13 @@
 - Membuat Halaman Game: free-fire-max.html dan menambahkan stylenya
 - Menambahkan margin-bottom di .item_container dengan nilai var(--mb-1) (bernilai 1rem)
 - Menghapus margin-top: 2rem di .pulsa_nohp
+
+0.002
+- Menambahkan autofocus ke input teks noHp saat pilihan dari radio di klik.
+  => Jika salah satu radio diklik makan akan memanggil function textFocus(), setelah function dipanggil form pengisian no HP atau id game akan ditampilkan dan focus akan di tempatkan ke input text.
+- Menambahkan checkbox guna untuk memvalidasi apakah nomor yang dimasukan sesuai dengan format.
+  => Jika checkbox diklik maka akan memanggil function enableButton(), setelah function tersebut dipanggil akan di validasi apakah nomor yang diinput sudah sesuai dengan format atau tidak, jika tidak maka akan menampilkan alert-validation dibawah input teks. Dan jika sudah sesuai, checkbox akan memililki nilai true dan submit button menjadi enabled.
+- Mengganti height .item menjadi calc(100vh - 18.5rem)
+  => Height diubah ke calc supaya bisa menyesuaikan dengan tinggi device dan footer bisa selalu dibawah.
+- Mengganti .item_container dan .membership_container di free-fire-max.html menjadi .game_container.
+  => Agar mudah untuk dilakukan pengecekan dan pembaruan.

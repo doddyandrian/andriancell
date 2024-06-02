@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Top Up Game | Andrian Cell</title>
-    <link rel="shortcut icon" href="assets/icon-logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../assets/image/icon-logo.png" type="image/x-icon" />
 
     <!-- My Style -->
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
   </head>
   <body>
     <!-- NAVIGATION -->
@@ -17,7 +17,7 @@
         window.addEventListener("DOMContentLoaded", function () {
           var navigation = document.getElementById("header");
           var xhr = new XMLHttpRequest();
-          xhr.open("GET", "assets/html/nav.html", true);
+          xhr.open("GET", "../assets/html/nav.html", true);
           xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
               navigation.innerHTML = xhr.responseText;
@@ -44,19 +44,29 @@
           <ul class="item_container grid">
             <!-- Free Fire MAX -->
             <li class="item_list">
-              <a class="item_link" href="game/free-fire-max.html">
+              <a class="item_link" href="free-fire/">
                 <div class="item_image">
-                  <img src="assets/image/free_fire.png" alt="Free Fire MAX" />
+                  <img src="../assets/image/free_fire.png" alt="Free Fire" />
                 </div>
-                Free Fire MAX
+                Free Fire
+              </a>
+            </li>
+
+            <!-- Google Play -->
+            <li class="item_list">
+              <a class="item_link" href="google-play/">
+                <div class="item_image">
+                  <img src="../assets/image/google_play.png" alt="Google Play Store" />
+                </div>
+                Kode Voucher Google Play
               </a>
             </li>
 
             <!-- Mobile Legends -->
             <li class="item_list">
-              <a class="item_link" href="game/mobile-legends.html">
+              <a class="item_link" href="mobile-legends/">
                 <div class="item_image">
-                  <img src="assets/image/mobile_legends.png" alt="Mobile Legends Bang Bang" />
+                  <img src="../assets/image/mobile_legends.png" alt="Mobile Legends Bang Bang" />
                 </div>
                 Mobile Legends
               </a>
@@ -74,7 +84,7 @@
         window.addEventListener("DOMContentLoaded", function () {
           var footer = document.getElementById("footer");
           var xhr = new XMLHttpRequest();
-          xhr.open("GET", "assets/html/footer.html", true);
+          xhr.open("GET", "../assets/html/footer.html", true);
           xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
               footer.innerHTML = xhr.responseText;
@@ -87,6 +97,6 @@
     <!-- AKHIR FOOTER -->
 
     <!-- MY JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
   </body>
 </html>

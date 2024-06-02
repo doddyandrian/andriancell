@@ -323,6 +323,7 @@ img {
 
 /* HOME ITEM */
 .item {
+  min-height: calc(100vh - 18.5rem);
   border-radius: 15px 15px 0 0;
   padding-bottom: 5rem;
 }
@@ -339,6 +340,8 @@ img {
 }
 
 .item_link {
+  width: 100%;
+  height: 100%;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
@@ -365,6 +368,8 @@ img {
 
 /* FOOTER */
 .footer {
+  bottom: 3rem;
+  width: 100%;
   background-color: var(--first-color-alt);
   border-radius: 15px 15px 0 0;
   box-shadow: 0 -5px 3px 2px #7a7a7a;
@@ -391,6 +396,7 @@ img {
 }
 
 .pulsa_label {
+  cursor: pointer;
   display: block;
   padding: 0.1rem;
   border: 1px solid var(--text-color);
@@ -421,7 +427,21 @@ input[type=tel].pulsa_telp {
   color: var(--text-color);
 }
 
+.check,
+.alert {
+  cursor: pointer;
+  font-size: var(--small-font-size);
+  margin: 0.5rem 0;
+}
+
+.alert_validation {
+  color: red;
+  font-size: var(--small-font-size);
+  margin-bottom: 0.5rem;
+}
+
 .pulsa_submit {
+  margin: 1rem 0;
   width: 100%;
   height: var(--big-font-size);
   font-size: var(--normal-font-size);
@@ -430,24 +450,95 @@ input[type=tel].pulsa_telp {
   border: none;
 }
 
-.pulsa_submit:hover {
+.pulsa_submit[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pulsa_submit:hover:enabled {
   background-color: var(--first-color);
 }
 
-.pulsa_submit:active {
+.pulsa_submit:active:enabled {
   background-color: var(--first-color-alt);
   color: var(--container-color);
 }
 
 /* TOP UP GAME */
-.title_item_game {
+.game_form .title_item_game {
   font-size: var(--normal-font-size);
 }
-
-.membership_container {
+.game_form .game_container {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   margin-bottom: var(--mb-1);
+}
+
+.game_list {
+  width: 100%;
+  text-align: center;
+}
+
+.game_label {
+  cursor: pointer;
+  display: block;
+  padding: 0.1rem;
+  border: 1px solid var(--text-color);
+}
+
+input[type=radio].game_radio {
+  display: none;
+  width: 100%;
+}
+
+input[type=radio]:checked + .game_label {
+  background-color: var(--first-color-lighter);
+}
+
+.game_id_user {
+  width: 100%;
+  display: none;
+}
+
+.input_id_game {
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-gap: 1rem;
+}
+
+input[type=tel].id_game {
+  width: 100%;
+  display: block;
+  height: var(--h1-font-size);
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  padding: 0.3rem;
+  letter-spacing: 0.05rem;
+  margin: 0.25rem 0 0.5rem;
+  color: var(--text-color);
+}
+
+.game_submit {
+  margin: 1rem 0;
+  width: 100%;
+  height: var(--big-font-size);
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  background-color: var(--first-color-lighter);
+  border: none;
+}
+
+.game_submit[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.game_submit:hover:enabled {
+  background-color: var(--first-color);
+}
+
+.game_submit:active:enabled {
+  background-color: var(--first-color-alt);
+  color: var(--container-color);
 }
 
 /* MEDIA QUERIES */

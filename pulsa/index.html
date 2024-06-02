@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pulsa | Andrian Cell</title>
-    <link rel="shortcut icon" href="assets/icon-logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/image/icon-logo.png" type="image/x-icon" />
 
     <!-- My Style -->
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
   </head>
   <body>
     <!-- NAVIGATION -->
@@ -17,7 +17,7 @@
         window.addEventListener("DOMContentLoaded", function () {
           var navigation = document.getElementById("header");
           var xhr = new XMLHttpRequest();
-          xhr.open("GET", "assets/html/nav.html", true);
+          xhr.open("GET", "../assets/html/nav.html", true);
           xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
               navigation.innerHTML = xhr.responseText;
@@ -44,9 +44,9 @@
           <ul class="item_container grid">
             <!-- Axis -->
             <li class="item_list">
-              <a class="item_link" href="pulsa/axis.html">
+              <a class="item_link" href="axis/">
                 <div class="item_image">
-                  <img src="assets/image/axis.png" alt="Axis" />
+                  <img src="../assets/image/axis.png" alt="Axis" />
                 </div>
                 AXIS
               </a>
@@ -54,9 +54,9 @@
 
             <!-- Indosat -->
             <li class="item_list">
-              <a class="item_link" href="pulsa/indosat.html">
+              <a class="item_link" href="indosat/">
                 <div class="item_image">
-                  <img src="assets/image/indosat_ooredoo.png" alt="Indosat Ooredoo" />
+                  <img src="../assets/image/indosat_ooredoo.png" alt="Indosat Ooredoo" />
                 </div>
                 Indosat Ooredoo
               </a>
@@ -64,9 +64,9 @@
 
             <!-- Smartfren -->
             <li class="item_list">
-              <a class="item_link" href="pulsa/smartfren.html">
+              <a class="item_link" href="smartfren/">
                 <div class="item_image">
-                  <img src="assets/image/smartfren.png" alt="Smartfren" />
+                  <img src="../assets/image/smartfren.png" alt="Smartfren" />
                 </div>
                 Smartfren
               </a>
@@ -74,9 +74,9 @@
 
             <!-- Telkomsel -->
             <li class="item_list">
-              <a class="item_link" href="pulsa/telkomsel.html">
+              <a class="item_link" href="telkomsel/">
                 <div class="item_image">
-                  <img src="assets/image/telkomsel.png" alt="Telkomsel" />
+                  <img src="../assets/image/telkomsel.png" alt="Telkomsel" />
                 </div>
                 Telkomsel
               </a>
@@ -84,9 +84,9 @@
 
             <!-- Tri -->
             <li class="item_list">
-              <a class="item_link" href="pulsa/tri.html">
+              <a class="item_link" href="tri/">
                 <div class="item_image">
-                  <img src="assets/image/tri.png" alt="Tri" />
+                  <img src="../assets/image/tri.png" alt="Tri" />
                 </div>
                 Tri
               </a>
@@ -94,9 +94,9 @@
 
             <!-- XL -->
             <li class="item_list">
-              <a class="item_link" href="pulsa/xl.html">
+              <a class="item_link" href="xl/">
                 <div class="item_image">
-                  <img src="assets/image/xl.png" alt="XL" />
+                  <img src="../assets/image/xl.png" alt="XL" />
                 </div>
                 XL
               </a>
@@ -114,7 +114,7 @@
         window.addEventListener("DOMContentLoaded", function () {
           var footer = document.getElementById("footer");
           var xhr = new XMLHttpRequest();
-          xhr.open("GET", "assets/html/footer.html", true);
+          xhr.open("GET", "../assets/html/footer.html", true);
           xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
               footer.innerHTML = xhr.responseText;
@@ -127,6 +127,6 @@
     <!-- AKHIR FOOTER -->
 
     <!-- MY JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
   </body>
 </html>

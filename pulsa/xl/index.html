@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pulsa XL | Andrian Cell</title>
-    <link rel="shortcut icon" href="assets/icon-logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../assets/image/icon-logo.png" type="image/x-icon" />
 
     <!-- My Style -->
-    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
   </head>
   <body>
     <!-- NAVIGATION -->
@@ -17,7 +17,7 @@
         window.addEventListener("DOMContentLoaded", function () {
           var navigation = document.getElementById("header");
           var xhr = new XMLHttpRequest();
-          xhr.open("GET", "../assets/html/nav.html", true);
+          xhr.open("GET", "../../assets/html/nav.html", true);
           xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
               navigation.innerHTML = xhr.responseText;
@@ -45,7 +45,7 @@
             <ul class="item_container grid">
               <!-- 5000 -->
               <li class="pulsa_list">
-                <input type="radio" class="pulsa_radio" name="pulsaXL" id="5000" value="5.000" />
+                <input type="radio" class="pulsa_radio" name="pulsaXL" onclick="textFocus()" id="5000" value="5.000" />
                 <label for="5000" class="pulsa_label">
                   5.000
                   <br />
@@ -55,7 +55,7 @@
 
               <!-- 10000 -->
               <li class="pulsa_list">
-                <input type="radio" class="pulsa_radio" name="pulsaXL" id="10000" value="10.000" />
+                <input type="radio" class="pulsa_radio" name="pulsaXL" onclick="textFocus()" id="10000" value="10.000" />
                 <label for="10000" class="pulsa_label">
                   10.000
                   <br />
@@ -65,7 +65,7 @@
 
               <!-- 15000 -->
               <li class="pulsa_list">
-                <input type="radio" class="pulsa_radio" name="pulsaXL" id="15000" value="15.000" />
+                <input type="radio" class="pulsa_radio" name="pulsaXL" onclick="textFocus()" id="15000" value="15.000" />
                 <label for="15000" class="pulsa_label">
                   15.000
                   <br />
@@ -75,7 +75,7 @@
 
               <!-- 25000 -->
               <li class="pulsa_list">
-                <input type="radio" class="pulsa_radio" name="pulsaXL" id="25000" value="25.000" />
+                <input type="radio" class="pulsa_radio" name="pulsaXL" onclick="textFocus()" id="25000" value="25.000" />
                 <label for="25000" class="pulsa_label">
                   25.000
                   <br />
@@ -85,7 +85,7 @@
 
               <!-- 30000 -->
               <li class="pulsa_list">
-                <input type="radio" class="pulsa_radio" name="pulsaXL" id="30000" value="30.000" />
+                <input type="radio" class="pulsa_radio" name="pulsaXL" onclick="textFocus()" id="30000" value="30.000" />
                 <label for="30000" class="pulsa_label">
                   30.000
                   <br />
@@ -95,7 +95,7 @@
 
               <!-- 50000 -->
               <li class="pulsa_list">
-                <input type="radio" class="pulsa_radio" name="pulsaXL" id="50000" value="50.000" />
+                <input type="radio" class="pulsa_radio" name="pulsaXL" onclick="textFocus()" id="50000" value="50.000" />
                 <label for="50000" class="pulsa_label">
                   50.000
                   <br />
@@ -105,33 +105,22 @@
 
               <!-- 100000 -->
               <li class="pulsa_list">
-                <input type="radio" class="pulsa_radio" name="pulsaXL" id="100000" value="100.000" />
+                <input type="radio" class="pulsa_radio" name="pulsaXL" onclick="textFocus()" id="100000" value="100.000" />
                 <label for="100000" class="pulsa_label">
                   100.000
                   <br />
                   Rp. 102.000
                 </label>
               </li>
-              <!-- <li class="pulsa_list">
-                <input type="radio" class="pulsa_radio" name="pulsaXL" id="200000" value="200.000" />
-                <label for="200000"> 200.000 </label><br />
-                <p>Rp. 203.000</p>
-              </li>
-              <li class="pulsa_list">
-                <input type="radio" class="pulsa_radio" name="pulsaXL" id="300000" value="300.000" />
-                <label for="300000"> 300.000 </label><br />
-                <p>Rp. 304.000</p>
-              </li>
-              <li class="pulsa_list">
-                <input type="radio" class="pulsa_radio" name="pulsaXL" id="500000" value="500.000" />
-                <label for="500000"> 500.000 </label><br />
-                <p>Rp. 506.000</p>
-              </li> -->
             </ul>
+
             <div class="pulsa_nohp">
-              <label for="">No. Handphone:</label><br />
+              <label for="noHp">No. Handphone:</label><br />
               <input id="noHp" type="tel" class="pulsa_telp" pattern="[0-9]{10,13}" placeholder="08XXXXXXXXXX" title="Masukkan nomor telepon yang valid (10-13 digit)" required />
-              <button type="submit" class="pulsa_submit" onclick="sendwhatsapp()">PESAN</button>
+              <div class="alert_validation" id="alert-validation"></div>
+              <input type="checkbox" class="check" id="check" onclick="enableButton()" />
+              <label for="check" class="alert">Pastikan nomor handphone sudah benar terlebih dahulu sebelum klik pesan</label>
+              <button type="submit" id="submit-button" class="pulsa_submit" onclick="sendwhatsapp()" disabled>PESAN</button>
             </div>
           </form>
 
@@ -166,7 +155,7 @@
         window.addEventListener("DOMContentLoaded", function () {
           var footer = document.getElementById("footer");
           var xhr = new XMLHttpRequest();
-          xhr.open("GET", "../assets/html/footer.html", true);
+          xhr.open("GET", "../../assets/html/footer.html", true);
           xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
               footer.innerHTML = xhr.responseText;
@@ -179,6 +168,6 @@
     <!-- AKHIR FOOTER -->
 
     <!-- MY JS -->
-    <script src="../assets/js/main.js"></script>
+    <script src="../../assets/js/main.js"></script>
   </body>
 </html>

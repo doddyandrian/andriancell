@@ -81,3 +81,57 @@ if (storedDarkMode !== null) {
 
 // Set initial dark mode state based on localStorage
 setDarkMode(storedDarkMode === "true");
+
+// TEXT FOCUS
+// Pulsa
+function textFocus() {
+  document.getElementById("noHp").focus();
+}
+
+// Game: Text Focus amd Show .game_id_user
+function focusIdGame() {
+  const showDiv = document.getElementById("game-id-user");
+  showDiv.style.display = "block";
+  document.getElementById("id-game").focus();
+}
+
+// VALIDATION AND ENABLE BUTTON
+// No Handphone
+function enableButton() {
+  var input = document.getElementById("noHp").value;
+  checkBox = document.getElementById("check");
+  button = document.getElementById("submit-button");
+  alertValidation = document.getElementById("alert-validation");
+
+  if (checkBox.checked == true) {
+    if (!/^\d{11,13}$/.test(input)) {
+      checkBox.checked = false;
+      alertValidation.textContent = "Masukkan nomor telepon yang valid (10-13 digit)";
+    } else {
+      button.disabled = false;
+      alertValidation.textContent = "";
+    }
+  } else {
+    button.disabled = true;
+  }
+}
+
+// Game
+function gameButton() {
+  var input = document.getElementById("id-game").value;
+  checkBox = document.getElementById("check-game");
+  button = document.getElementById("submit-game");
+  alertValidation = document.getElementById("alert-validation");
+
+  if (checkBox.checked == true) {
+    if (input === "") {
+      checkBox.checked = false;
+      alertValidation.textContent = "Masukkan User ID yang valid";
+    } else {
+      button.disabled = false;
+      alertValidation.textContent = "";
+    }
+  } else {
+    button.disabled = true;
+  }
+}

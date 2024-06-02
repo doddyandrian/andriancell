@@ -333,6 +333,7 @@ img {
 
 /* HOME ITEM */
 .item {
+  min-height: calc(100vh - 18.5rem);
   border-radius: 15px 15px 0 0;
   padding-bottom: 5rem;
 }
@@ -349,6 +350,8 @@ img {
 }
 
 .item_link {
+  width: 100%;
+  height: 100%;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
@@ -377,6 +380,9 @@ img {
 /* FOOTER */
 
 .footer {
+  bottom: 3rem;
+  width: 100%;
+  // position: absolute;
   background-color: var(--first-color-alt);
   border-radius: 15px 15px 0 0;
   box-shadow: 0 -5px 3px 2px #7a7a7a;
@@ -392,77 +398,10 @@ img {
   padding: 2rem 0 2.5rem;
 }
 
-/* PULSA */
-.pulsa_form {
-  .item_container {
-    grid-gap: 0.5rem;
-  }
-}
-
-.pulsa_list {
-  width: 100%;
-  text-align: center;
-}
-
-.pulsa_label {
-  display: block;
-  padding: 0.1rem;
-  border: 1px solid var(--text-color);
-}
-
-input[type="radio"].pulsa_radio {
-  display: none;
-  width: 100%;
-}
-
-input[type="radio"]:checked + .pulsa_label {
-  background-color: var(--first-color-lighter);
-}
-
-.pulsa_nohp {
-  width: 100%;
-}
-
-input[type="tel"].pulsa_telp {
-  width: 100%;
-  display: block;
-  height: var(--h1-font-size);
-  font-size: var(--normal-font-size);
-  font-family: var(--body-font);
-  padding: 0.3rem;
-  letter-spacing: 0.05rem;
-  margin: 0.25rem 0 0.5rem;
-  color: var(--text-color);
-}
-
-.pulsa_submit {
-  width: 100%;
-  height: var(--big-font-size);
-  font-size: var(--normal-font-size);
-  font-family: var(--body-font);
-  background-color: var(--first-color-lighter);
-  border: none;
-}
-
-.pulsa_submit:hover {
-  background-color: var(--first-color);
-}
-
-.pulsa_submit:active {
-  background-color: var(--first-color-alt);
-  color: var(--container-color);
-}
-
-/* TOP UP GAME */
-.title_item_game {
-  font-size: var(--normal-font-size);
-}
-
-.membership_container {
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-  margin-bottom: var(--mb-1);
-}
+// PULSA STYLE
+@import "module/pulsa";
+// GAME STYLE
+@import "module/game";
 
 /* MEDIA QUERIES */
 /* For small devices */
